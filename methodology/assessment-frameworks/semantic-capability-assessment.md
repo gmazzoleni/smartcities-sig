@@ -576,7 +576,7 @@ Governed by: Functional viewpoint (6.5), Trustworthiness viewpoint (6.6).
 
 Model kind: Observation semantics – method-of-production model.
 
-Purpose: Describe how each observation (measured, estimated, predicted, simulated, aggregated, proxy) is obtained and its impact on functionality and trustworthiness.
+Purpose: Describe how each observation (measured, estimated, predicted, simulated, aggregated across assets, proxy) is obtained and its impact on functionality and trustworthiness.
 
 
 ### Municipality Operational Questions
@@ -586,7 +586,7 @@ Purpose: Describe how each observation (measured, estimated, predicted, simulate
 - Was this value directly measured or estimated?
 - Was this lighting level calculated from luminaire characteristics?
 - Is this observation based on a sensor, a model, or historical data?
-- Can this information be trusted for operational decisions?
+- Can this information be trusted for operational decisions, given how it was produced?
 
 #### Water Management & Irrigation
 
@@ -605,7 +605,7 @@ Examples include:
 - Estimated
 - Inferred
 - Predicted
-- Aggregated
+- Aggregated (across assets or locations; aggregation across time is addressed by Temporal Semantics)
 - Simulated
 - Model-derived
 - Proxy measurement
@@ -653,7 +653,7 @@ Purpose: Describe the temporal characteristics of observations (point in time, i
 
 - Does this observation represent the current situation or an historical average?
 - What period of time does this observation cover?
-- Were these measurements aggregated?
+- Were these measurements aggregated over time (e.g., averaged over an interval) rather than reported instantaneously?
 - Can observations collected at different times be compared?
 
 #### Water Management & Irrigation
