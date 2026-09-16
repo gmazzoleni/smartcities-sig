@@ -12,10 +12,10 @@ layout: doc
 
 - [X] Volume per unit of time (or during a time period indicated as the second value). Specify whether liters or cubic meters.
 - [X] Time at which it was measured (time of completion, or start)
-- [ ] Temperature, pH and other environmental soil parameters
+- [x] Temperature, pH and other environmental soil parameters
 - [ ] Weather at that time
 - [ ] Weather forecast at that time
-- [ ] Water pressure
+- [x] Water pressure
 - [ ] Additional characteristics of the water: recycled or potable…
 
 
@@ -27,9 +27,15 @@ layout: doc
 
 - Water quality sensor (OMA) Object [#3426](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3426.xml)
 
+- Pressure monitoring sensor (OMA) [#3427](https://github.com/OpenMobileAlliance/lwm2m-registry/blob/prod/3427.xml)
+
 - [WaterConsumptionObserved (Smart Data Models)](https://github.com/smart-data-models/dataModel.WaterConsumption/blob/master/WaterConsumptionObserved/doc/spec.md)
 
 - [WaterDistributionNetwork (Smart Data Models)](https://github.com/smart-data-models/dataModel.WaterDistribution/blob/master/WaterDistributionNetwork/doc/spec.md)
+
+- [AgriParcelRecord (Smart Data Model)](https://github.com/smart-data-models/dataModel.Agrifood/blob/master/AgriParcelRecord/doc/spec.md)
+
+- [WeatherObserved  (Smart Data Model)](https://github.com/smart-data-models/dataModel.Weather/blob/master/WeatherObserved/doc/spec.md)
 
 
 
@@ -37,15 +43,17 @@ layout: doc
 
 | OMA                               | FIWARE                                       |
 | --------------------------------- | -------------------------------------------- |
-| Latitude (6/1) Longitude (6/2)    | location                                     |
-| Cumulated water volume (3424/1)   | waterConsumption                             |
-| Timestamp (3424/5518)             | observationDateTime                          |
-| Minimum  flow rate (3424/7)       | minFlow                                      |
-| Maximum  flow rate (3424/8)       | maxFlow                                      |
-| Leak  detected (3424/10)          | alarmStopsLeaks                              |
-| Fraud detected (3424/13)          | moduleTampered                               |
-| pH (3426/1 - WaterQuality object) | pHTSA                                        |
-| *TODO*                            | waterPressure  (in WaterDistributionNetwork) |
+| Latitude (6/1) Longitude (6/2)    | WaterConsumptionObserved.location            |
+| Cumulated water volume (3424/1)   | WaterConsumptionObserved.waterConsumption    |
+| Timestamp (3424/5518)             | WaterConsumptionObserved.observationDateTime |
+| Minimum  flow rate (3424/7)       | WaterConsumptionObserved.minFlow             |
+| Maximum  flow rate (3424/8)       | WaterConsumptionObserved.maxFlow             |
+| Leak  detected (3424/10)          | WaterConsumptionObserved.alarmStopsLeaks     |
+| Fraud detected (3424/13)          | WaterConsumptionObserved.moduleTampered      |
+| pH (3426/1 - WaterQuality object) | WaterConsumptionObserved.pHTSA               |
+| Pressure (3427/1)                 | WaterDistributionNetwork.waterPressure       |
+| Temperature (3303/5700)           | AgriParcelRecord.soilTemperature             |
+| Acidity (3326/5700)               | TODO                                         |
 
 
 ### Tests
